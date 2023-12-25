@@ -1,0 +1,28 @@
+
+
+.foorterImg{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color:thistle;
+}
+
+.footer-intro{
+    font-weight: 500;
+ 
+}
+.footer-brand{
+  
+    font-size: 20px;
+}
+
+
+
+#footer{
+background-color:var(--text-color);
+
+}
+
+.footer-intro , .footer-copy,.footer-brand, .footer-icon{
+    color: #FAF1E4;
+}
