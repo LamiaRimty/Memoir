@@ -1,11 +1,11 @@
 import "./Home.css";
 // import Gallery from "../Gallery/Gallery";
-// import Blog from "../Blog/Blog";
+import Blogs from "../Blogs/Blogs";
 
 function Home() {
   return (
     <>
-      <section className="home">
+      <section id="home">
         <div className="container container-home col-xxl-8 px-4 py-4">
           <div className="home-title">
             <h1 className="home-heading animate__animated animate__zoomIn">
@@ -26,8 +26,8 @@ function Home() {
           {/* </div> */}
         </div>
       </section>
-      {/* <Gallery />
-      <Blog /> */}
+
+      <Blogs />
     </>
   );
 }

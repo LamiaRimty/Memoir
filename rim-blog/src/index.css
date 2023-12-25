@@ -22,19 +22,19 @@
   /* Color */
  /* https://colorhunt.co/palette/faf1e4cedebd9eb384435334 */
 
- --first-color: #435334;
+ --first-color: rgb(54, 11, 85);
  --first-color-2nd:#9EB384;
- --first-color-alt:#9EB384;
+ --first-color-alt:
  --first-color-lighter:#CEDEBD;
  --title-color:  indigo;
- --text-color: indigo;
+ --text-color: rgb(44, 8, 70);
   --text-color-light:orchid;
  --input-color:paleturquoise;
  --body-color: #f9f9f9;
  --container-color: #FAF1E4;
  --scroll-bar-color:#CEDEBD;
  --scroll-thumb-color:#9EB384;
-  
+
   
   --body-font:font-family: 'Lora', serif;
   --big-font: 32px;
