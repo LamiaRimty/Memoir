@@ -1,6 +1,23 @@
 import "./Blogs.css";
+import { useEffect } from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 const Blogs = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchAllBlogs = async () => {
+      try {
+        const res = await axios.get("http://localhost:8800/blogs");
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchAllBlogs();
+  });
+
   return (
     <section id="Blogs">
       <article className="singleBlog">
