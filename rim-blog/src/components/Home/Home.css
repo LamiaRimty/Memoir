@@ -1,0 +1,41 @@
+
+.container-home {
+    margin-top: -60px;
+    text-align: center;
+   
+}
+
+h3{
+    
+    color: #f9f9f9;
+    outline: none;
+    font-style: italic;
+}
+
+.home-title{
+
+   align-items: center;
+   font-family: fantasy;
+    font-size: 30px;
+    color:#5E454B;
+    color: teal;
+    font-weight: 900;
+    /* font-style: italic */
+}
+
+.home-subtitle{
+margin-bottom: 30px;
+    color:var(--text-color);
+   
+}
+
+.home-img{
+
+    object-fit: cover;
+    width: 40%;
+    align-items: center;
+    position: relative;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
