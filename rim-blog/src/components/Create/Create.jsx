@@ -4,6 +4,29 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Create() {
+  const [blog, setBlog] = useState({
+    image: "",
+    title: "",
+    time: "",
+    qoute: "",
+    desc: "",
+  });
+  const navigate = useNavigate();
+  const handleChange = (e) => {
+    setBlog((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:8800/blogs", blog);
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log(blog);
   return (
     <>
       <section id="createBlog">
