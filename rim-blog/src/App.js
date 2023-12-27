@@ -1,9 +1,10 @@
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
-// import About from "./components/About/About";
+import About from "./components/About/About";
 // import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Blogs from "./components/Blogs/Blogs";
+import Create from "./components/Create/Create";
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,6 +19,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route path="/blogs" element={<Blogs/> }/>
+        <Route path="/about" element={<About />} />
+        <Route path="/create" element={<Create />} />
         
       </Routes>
       <Footer />
