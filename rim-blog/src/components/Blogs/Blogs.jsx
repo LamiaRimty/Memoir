@@ -43,7 +43,7 @@ const Blogs = () => {
                     alt="blog-img"
                   ></img>
                   <div className="card-body">
-                    <Link to={`blog/${blog.id}`} className="link">
+                    <Link to={`/blog/${blog.id}`} className="link">
                       <h3 className="card-title">{blog.title}</h3>
                     </Link>
 
