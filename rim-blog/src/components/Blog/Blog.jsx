@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { redirect, useParams } from "react-router-dom";
-
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Blog.css";
 import { BsPencilSquare } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
@@ -24,7 +24,6 @@ function Blog() {
     try {
       await axios.delete("http://localhost:8800/blog/" + id);
       window.location.reload();
-      redirect("/");
     } catch (err) {
       console.log(err);
     }
@@ -58,7 +57,9 @@ function Blog() {
           </button>
 
           <button className="btn update-btn">
-            <BsPencilSquare />
+            <Link to={`/update/${blogPost.id}`}>
+              <BsPencilSquare />
+            </Link>
           </button>
         </div>
       </section>
