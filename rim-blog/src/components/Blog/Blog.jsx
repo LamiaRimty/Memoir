@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { redirect, useParams } from "react-router-dom";
 
 import "./Blog.css";
 import { BsPencilSquare } from "react-icons/bs";
@@ -20,18 +20,15 @@ function Blog() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  //   try {
-  //     const res = await axios.get(`http://localhost:8800/blogs/blog/${id}`);
-  //     //console.log(res);
-  //     setBlogPost(res.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   fetchBlogDetails();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete("http://localhost:8800/blog/" + id);
+      window.location.reload();
+      redirect("/");
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>
@@ -53,14 +50,16 @@ function Blog() {
           </article>
         ) : null}
         <div className="buttons">
-          <button className="button">
-            <BsPencilSquare />
-          </button>
-          <button className="button">
+          <button
+            className="btn delete-btn"
+            onClick={() => handleDelete(blogPost.id)}
+          >
             <AiOutlineDelete />
           </button>
 
-          <button className="button">Update</button>
+          <button className="btn update-btn">
+            <BsPencilSquare />
+          </button>
         </div>
       </section>
     </>
