@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Update.css";
 
 const Update = () => {
@@ -13,17 +13,19 @@ const Update = () => {
   });
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const blogId = location.pathname.split("/")[2];
 
   const handleChange = (e) => {
     setBlogPost((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  // console.log(book);
+  // console.log(blogPost);
 
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8800/blog", blogPost);
+      await axios.put("http://localhost:8800/blog/" + blogId, blogPost);
       navigate("/");
     } catch (err) {
       console.log(err);
@@ -35,7 +37,7 @@ const Update = () => {
       <h1>Update the Blog</h1>
       <input
         type="text"
-        placeholder="img"
+        placeholder="image"
         onChange={handleChange}
         name="image"
       />
@@ -52,8 +54,8 @@ const Update = () => {
         name="time"
       />
       <input
-        type="qoute"
-        placeholder="desc"
+        type="text"
+        placeholder="qoute"
         onChange={handleChange}
         name="qoute"
       />

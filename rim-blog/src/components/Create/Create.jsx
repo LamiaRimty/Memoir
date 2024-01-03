@@ -48,7 +48,8 @@ function Create() {
                 onChange={handleChange}
                 accept="image/*"
                 className="composeBlog"
-                type="file"
+                // type="file"
+                type="text"
                 autoFocus={true}
                 name="image"
               />

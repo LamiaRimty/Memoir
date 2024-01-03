@@ -33,8 +33,8 @@ const Blogs = () => {
           {/* Album card codes */}
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {blogs.map((blog) => (
-              <div className="col">
-                <div className="card cardItems shadow-sm " key={blog.id}>
+              <div className="col" key={blog.id}>
+                <div className="card cardItems shadow-sm ">
                   <img
                     className="bd-placeholder-img card-img-top"
                     width="100%"

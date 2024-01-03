@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Blog.css";
@@ -8,7 +9,7 @@ import axios from "axios";
 
 function Blog() {
   const { id } = useParams();
-  const [blogPost, setBlogPost] = useState(null);
+  const [blogPost, setBlogPost] = useState([]);
   //   const PublicFolder = "http://localhost:8800/images/";
 
   const fetchBlogDetails = async () => {
@@ -20,10 +21,12 @@ function Blog() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const navigate = useNavigate();
   const handleDelete = async (id) => {
     try {
       await axios.delete("http://localhost:8800/blog/" + id);
-      window.location.reload();
+      // window.location.reload();
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -48,7 +51,7 @@ function Blog() {
             </div>
           </article>
         ) : null}
-        <div className="buttons">
+        <div className="buttons" key={blogPost.id}>
           <button
             className="btn delete-btn"
             onClick={() => handleDelete(blogPost.id)}

@@ -4,7 +4,7 @@ function Footer() {
   return (
     <section id="footer">
       <div className="container col-xxl-8 px-4 py-5">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-bottom">
+        <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-bottom">
           <div className="col mb-3">
             <a
               className="navbar-brand d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
