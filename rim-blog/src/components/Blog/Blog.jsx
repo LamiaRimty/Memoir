@@ -34,7 +34,8 @@ function Blog() {
       console.log(err);
     }
   };
-  const handleUpdate = async () => {
+  const handleUpdate = async (e) => {
+    e.preventDefault();
     console.log(1);
     try {
       await axios.put(`http://localhost:8800/blog/${id}`, {
