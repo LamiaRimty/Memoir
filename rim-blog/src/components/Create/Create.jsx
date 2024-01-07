@@ -14,28 +14,28 @@ function Create() {
 
   const navigate = useNavigate();
 
-  // const handleFileChange = (e) => {
-  //   setBlog({ ...blog, image: e.target.files[0] });
-  // };
+  const handleFileChange = (e) => {
+    setBlog({ ...blog, image: e.target.files[0] });
+  };
   const handleInputChange = (e) => {
     setBlog({ ...blog, [e.target.name]: e.target.value });
   };
 
-  // const handleCreateBlog = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const formData = new FormData();
-  //     formData.append("image", blog.image);
-  //     formData.append("title", blog.title);
-  //     formData.append("time", blog.time);
-  //     formData.append("qoute", blog.qoute);
-  //     formData.append("desc", blog.desc);
-  //     await axios.post("http://localhost:8800/blogs", formData);
-  //     navigate("/");
-  //   } catch (error) {
-  //     console.log("Error creating blog:", error);
-  //   }
-  // };
+  const handleCreateBlog = async (e) => {
+    e.preventDefault();
+    try {
+      const formData = new FormData();
+      formData.append("image", blog.image);
+      formData.append("title", blog.title);
+      formData.append("time", blog.time);
+      formData.append("qoute", blog.qoute);
+      formData.append("desc", blog.desc);
+      await axios.post("http://localhost:8800/blogs", formData);
+      navigate("/");
+    } catch (error) {
+      console.log("Error creating blog:", error);
+    }
+  };
 
   console.log(blog);
   return (

@@ -61,7 +61,7 @@ function Blog() {
               <div>
                 <img
                   className="blogPost-img"
-                  src={`http://localhost:8800/uploads/${blogPost.image}`}
+                  // src={`http://localhost:8800/uploads/${blogPost.image}`}
                   alt=""
                 />
               </div>

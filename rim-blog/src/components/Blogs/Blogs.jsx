@@ -39,7 +39,7 @@ const Blogs = () => {
                     className="bd-placeholder-img card-img-top"
                     width="100%"
                     height="225"
-                    src={`http://localhost:8800/uploads/${blog.image}`}
+                    // src={`http://localhost:8800/uploads/${blog.image}`}
                     alt="blog-img"
                   ></img>
                   <div className="card-body">
