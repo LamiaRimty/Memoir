@@ -4,62 +4,59 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Create() {
-  const [file, setFile] = useState(null);
-  const [title, setTitle] = useState("");
-  const [time, setTime] = useState("");
-  const [qoute, setQoute] = useState("");
-  const [description, setDescription] = useState("");
-
-  const upload = async () => {
-    try {
-      const formData = new FormData();
-      formData.append("file", file);
-      const res = await axios.post(`http://localhost:8800/upload`, formData);
-      console.log(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [blog, setBlog] = useState({
+    image: null,
+    title: "",
+    time: "",
+    qoute: "",
+    desc: "",
+  });
 
   const navigate = useNavigate();
 
-  // const handleChange = (e) => {
-  //   setBlog((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  // const handleFileChange = (e) => {
+  //   setBlog({ ...blog, image: e.target.files[0] });
   // };
-
-  const handleClick = async (e) => {
-    e.preventDefault();
-    upload();
-    // try {
-    //   // await axios.post("http://localhost:8800/blogs", blog);
-    //   navigate("/");
-    // } catch (error) {
-    //   console.log(error);
-    // }
+  const handleInputChange = (e) => {
+    setBlog({ ...blog, [e.target.name]: e.target.value });
   };
 
-  // console.log(blog);
+  // const handleCreateBlog = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const formData = new FormData();
+  //     formData.append("image", blog.image);
+  //     formData.append("title", blog.title);
+  //     formData.append("time", blog.time);
+  //     formData.append("qoute", blog.qoute);
+  //     formData.append("desc", blog.desc);
+  //     await axios.post("http://localhost:8800/blogs", formData);
+  //     navigate("/");
+  //   } catch (error) {
+  //     console.log("Error creating blog:", error);
+  //   }
+  // };
+
+  console.log(blog);
   return (
     <>
       <section id="createBlog">
         <div className="container-compose">
           <div className="container">
-            {file && (
+            {/* {file && (
               <img
                 className="composeImg"
                 src={URL.createObjectURL(file)}
                 alt="composeImg"
               />
-            )}
+            )} */}
           </div>
-          <form className="composeForm">
+          <form className="composeForm" action="/submit" method="post">
             <div className="composeFormGroup flexCenter">
-              <label className="file" htmlFor="file">
-                Upload Image
-              </label>
+              <label>Cover Photo</label>
               <input
                 id="fileInput"
-                onChange={(e) => setFile(e.target.files[0])}
+                onChange={handleFileChange}
                 accept="image/*"
                 className="composeBlog"
                 type="file"
@@ -70,21 +67,21 @@ function Create() {
             <div className="composeFormGroup">
               <label>Title</label>
               <input
-                onChange={(e) => setTitle(e.target.value)}
+                onChange={handleInputChange}
                 className="composeBlog"
                 type="text"
-                placeholder="Title"
-                autoFocus={true}
                 name="title"
+                placeholder="title"
+                autoFocus={true}
               />
             </div>
             <div className="composeFormGroup">
               <label>Time</label>
               <input
-                onChange={(e) => setTime(e.target.value)}
+                onChange={handleInputChange}
                 className="composeBlog"
                 type="text"
-                placeholder="Time"
+                placeholder="time"
                 autoFocus={true}
                 name="time"
               />
@@ -93,10 +90,10 @@ function Create() {
             <div className="composeFormGroup">
               <label>Qoute</label>
               <input
-                onChange={(e) => setQoute(e.target.value)}
+                onChange={handleInputChange}
                 className="composeBlog"
                 type="text"
-                placeholder="Qoute"
+                placeholder="qoute"
                 autoFocus={true}
                 name="qoute"
               />
@@ -105,7 +102,7 @@ function Create() {
             <div className="composeFormGroup" id="composeEdit">
               <label>Description</label>
               <textarea
-                onChange={(e) => setDescription(e.target.value)}
+                onChange={handleInputChange}
                 className="composeBlog"
                 type="text"
                 placeholder="Write a blog..."
@@ -119,7 +116,7 @@ function Create() {
               className="button composeBlogBtn"
               type="submit"
               autoComplete="off"
-              onClick={handleClick}
+              onClick={handleCreateBlog}
             >
               Publish
             </button>

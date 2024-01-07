@@ -59,7 +59,11 @@ function Blog() {
           <article className="singleBlog">
             <div className="container" key={blogPost.id}>
               <div>
-                <img src={blogPost.image} alt="" />
+                <img
+                  className="blogPost-img"
+                  src={`http://localhost:8800/uploads/${blogPost.image}`}
+                  alt=""
+                />
               </div>
               {updateMode ? (
                 <input
