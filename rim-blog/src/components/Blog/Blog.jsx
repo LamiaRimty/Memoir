@@ -39,7 +39,10 @@ function Blog() {
     console.log(1);
     try {
       await axios.put(`http://localhost:8800/blog/${id}`, {
+        image: blogPost.image,
         title,
+        time: blogPost.time,
+        qoute: blogPost.qoute,
         desc,
       });
       console.log(2);
