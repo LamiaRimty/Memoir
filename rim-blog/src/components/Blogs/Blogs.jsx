@@ -24,7 +24,7 @@ const Blogs = () => {
   return (
     <section id="blogs">
       <div className="album  bg-body-">
-        <p className="memoir-caption">
+        <p className="memoir-caption animate__animated animate__backInLeft">
           💁🏻‍♀️ Memoir is my thought of words that need to be written...🖌️
         </p>
         <div className="container">
@@ -53,7 +53,7 @@ const Blogs = () => {
                   </div>
                 */}
 
-                  <div class="main">
+                  <div class="main animate__animated animate__zoomInUp">
                     <ul class="cards">
                       <li class="cards_item">
                         <div class="card">
