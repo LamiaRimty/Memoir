@@ -60,14 +60,10 @@ function Blog() {
       <section id="blog">
         {blogPost ? (
           <article className="singleBlog">
-            <div className="container" key={blogPost.id}>
-              <div>
-                <img
-                  className="blogPost-img"
-                  src={`http://localhost:8800/uploads/${blogPost.image}`}
-                  alt=""
-                />
-              </div>
+            <div
+              className="container px-4 py-1 my-5 text-center"
+              key={blogPost.id}
+            >
               {updateMode ? (
                 <input
                   type="text"
@@ -77,25 +73,32 @@ function Blog() {
                 />
               ) : (
                 <>
-                  <h1 className="blogTitle">
-                    {title}
-                    <div className="buttons blogEdit">
-                      <button
-                        className="button"
-                        onClick={() => setUpdateMode(true)}
-                      >
-                        <BsPencilSquare />
-                      </button>
-
-                      <button className="button" onClick={handleDelete}>
-                        <AiOutlineDelete />
-                      </button>
-                    </div>
-                  </h1>
+                  <h1 className="blogTitle">{title}</h1>
                 </>
               )}
+              <div>
+                <img
+                  className="blogPost-img img-fluid border rounded-3 shadow-lg d-block  mx-auto mb-4"
+                  src={`http://localhost:8800/uploads/${blogPost.image}`}
+                  alt=""
+                />
+              </div>
 
-              <p className="time">{blogPost.time}</p>
+              <div className="date-edit d-flex">
+                <p className="date">{blogPost.time}</p>
+                <div className="buttons blogEdit">
+                  <button
+                    className="button"
+                    onClick={() => setUpdateMode(true)}
+                  >
+                    <BsPencilSquare />
+                  </button>
+
+                  <button className="button" onClick={handleDelete}>
+                    <AiOutlineDelete />
+                  </button>
+                </div>
+              </div>
 
               {updateMode ? (
                 <textarea

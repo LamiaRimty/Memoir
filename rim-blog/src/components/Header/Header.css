@@ -16,14 +16,14 @@
     border-radius: 50%;
     height: 80px;
     width: 80px;
-    /* margin-left:15px ; */
+ 
 }
 
 .nav-link{
     align-items: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: var(--first-color);
-    font-size: 16px;
+    color: var(--title-color);
+    font-size: 20px;
     font-weight: 300;
 }
 
@@ -33,12 +33,12 @@
 
 #active-nav{
     font-weight:500 ;
-    color: var(--text-color)
+    color:plum;
 }
 
 
 .header-icon{
-    color: var(--text-color);
+    color: var(--title-color);
 }
 
 .nav-item{

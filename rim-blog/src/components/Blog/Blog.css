@@ -1,8 +1,19 @@
 .blogPost-img{
-    width: 500px;
-    height: 500px;
+    /* width: 500px;
+    height: 500px; */
+    vertical-align: middle;
+    max-width: 80%;
+    height: auto;
+    display: flex!important;
 }
 
+.date-edit{
+    justify-content:space-between;
+    align-items:center; 
+}
+.date{
+    color: gray;
+}
 .delete-btn{
     background-color:orangered;
     /* background-image: -webkit-linear-gradient(top,indigo,#f08080 );

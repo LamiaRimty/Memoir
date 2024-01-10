@@ -1,4 +1,10 @@
-
+.memoir-caption{
+    color: indigo;
+    font-size: 18px;
+    font-family: fantasy;
+    font-style:normal;
+    text-align: center;
+}
 .cardItems{
    background:var(--first-color);
    padding: 20px;
@@ -8,28 +14,35 @@
 }
 
 .cardItems:hover{
-    border:1px solid var(--first-color);
+    border:1px solid var(--first-color-2nd);
     background: transparent;
 }
 
-
-.card-title{
-    margin: 20px 0 10px;
-    font-size: 20px;
+.card_content {
+    padding: 1.2rem;
+  }
   
-    font-weight: 900;
-    color: var(--input-color);
+  h2.card-title,p {
+    margin: 1.2rem 0;
+    font-size: 20px;
+    font-family:var(--body-font);
+    font-weight: 700;
+    color: var(--title-color);
     cursor: pointer;
     text-decoration: none;
     text-align: left;
-}
+  }
+  h2.card-title {
+      font-size: 1.3em;
+  }
+
+
 .card-qoute{
-    font-size: 14px;
-    color: var(--text-color-light);
+    font-size: 16px;
+    color: var(--title-color);
     font-weight:medium; 
     text-align: left;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+    /* font-family: var(--body-font); */
 }
 .card-qoute:hover{
     color:teal;
@@ -39,14 +52,9 @@
 
 .card-time{
   
-    color:white;
+    color:grey;
     font-weight: lighter;
-    font-size: 11px;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: flex-end; */
-
-    
+    font-size: 12px;   
 }
   
 
@@ -59,7 +67,7 @@
 
     
     .right-section{
-        /* flex-grow: 1; */
+        flex-grow: 1;
         display: flex;
         flex-wrap: wrap;
         column-gap: 16px;
@@ -88,7 +96,7 @@
     }
     
     .left-section.flex button{
-        background-color:teal;
+       
         color: aliceblue;
         width: 176px;
         padding: 12px 0;
@@ -106,14 +114,14 @@
 
     
     .card{
-        border: 1px solid lightgreen;
-        border-radius: 5px;
+     
+        border-radius: 15px;
         transition: 0.3s;
-        box-shadow: 5px 5px 20px black;
+        box-shadow: 5px 5px 20px plum;
     }
     
     .card:hover{
-     border: 1px solid teal;
+     border: 1px solid indigo;
      rotate: 1deg;
      scale: 1.01;
      cursor: pointer;
@@ -122,19 +130,18 @@
         height: 300px;
         width: 200px;
         object-fit: cover;
-        background-color: purple;
-        border-radius:5px ;
-    }
+        border-radius:20px ;
+    } 
 
     
-    .card .box {
+  .card .box {
     padding: 16px 8px;
     width: 300px;
     }
     
     .card .box .title{
         color: teal;
-    }
+    } 
     
  
     .card .box .subtitle{
@@ -149,10 +156,7 @@
         justify-content: space-between;
     }
     
-    /* .more{
-        align-self: self-end;
-        left:10px;
-    } */
+
     
     .card a.link{
         color: royalblue;
@@ -161,5 +165,79 @@
     
     }
  
+/* Code before experiment till here */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+.card_image {
+  height: calc(13*1.2rem);
+  padding: 1.2rem 1.2rem 0;
+  position:relative;
+}
+.card_image:before,
+.card_image:after{
+  content: "";
+  position: absolute;
+  width: 20px;
+  left: 60%;
+  top: 0;
+  height: 45px;
+  transform: rotate(45deg);
+}
+.card_image:after{
+  transform: rotate(-45deg);
+  top:auto;
+  bottom:-22px;
+  left:40%;
+}
+.card_image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.cards_item {
+  filter:drop-shadow(0 0 5px rgba(23, 22, 24, 0.18));
   
+}
+
+
+.card {
+
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  line-height: 1.2rem;
+  -webkit-mask:radial-gradient(circle .8rem at 2px 50%,#0000 98%,#000)0 0/100% 2.4rem;
+}
+
+
+
+
+html {
+  font-size:15px;
+}

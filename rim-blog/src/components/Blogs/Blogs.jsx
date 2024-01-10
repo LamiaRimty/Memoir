@@ -23,44 +23,65 @@ const Blogs = () => {
 
   return (
     <section id="blogs">
-      <div className="album py-5 bg-body-">
-        <h2 className="section-title">My Thought</h2>
-        <span className="section-subtitle">
-          I love nature 🌿 I like to capture every moment wherever I
-          go.Throughout this blog, I'll share my experience of life.🚶🏻‍♀️
-        </span>
+      <div className="album  bg-body-">
+        <p className="memoir-caption">
+          💁🏻‍♀️ Memoir is my thought of words that need to be written...🖌️
+        </p>
         <div className="container">
-          {/* Album card codes */}
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {blogs.map((blog) => (
-              <div className="col" key={blog.id}>
-                <div className="card cardItems shadow-sm ">
-                  <img
-                    className="bd-placeholder-img card-img-top"
-                    width="100%"
-                    height="225"
-                    src={`http://localhost:8800/uploads/${blog.image}`}
-                    alt="blog-img"
-                  />
-                  <div className="card-body">
-                    <Link to={`/blog/${blog.id}`} className="link">
+              <Link to={`/blog/${blog.id}`} className="link">
+                <div className="col" key={blog.id}>
+                  {/* Code before experiment */}
+                  {/* <div className="card cardItems shadow-sm ">
+                    <img
+                      className="bd-placeholder-img card-img-top"
+                      width="100%"
+                      height="225"
+                      src={`http://localhost:8800/uploads/${blog.image}`}
+                      alt="blog-img"
+                    />
+                    <div className="card-body">
                       <h3 className="card-title">{blog.title}</h3>
-                    </Link>
-
-                    <p className="card-qoute">{blog.qoute}</p>
-                    <small className="card-time">
-                      {" "}
-                      <AiOutlineClockCircle className="clock-icon" />{" "}
-                      {blog.time}
-                    </small>
+                      <p className="card-qoute">{blog.qoute}</p>
+                      <small className="card-time">
+                        {" "}
+                        <AiOutlineClockCircle className="clock-icon" />{" "}
+                        {blog.time} 🥐 ☕️
+                      </small>
+                    </div>
                   </div>
+                */}
+
+                  <div class="main">
+                    <ul class="cards">
+                      <li class="cards_item">
+                        <div class="card">
+                          <div class="card_image">
+                            <img
+                              src={`http://localhost:8800/uploads/${blog.image}`}
+                              alt="mixed vegetable salad in a mason jar. "
+                            />
+                          </div>
+                          <div class="card_content">
+                            <h2 class="card-title">{blog.title}</h2>
+                            <p class="card-qoute">{blog.qoute}</p>
+                            <small className="card-time">
+                              {" "}
+                              <AiOutlineClockCircle className="clock-icon" />{" "}
+                              {blog.time} 🥐 ☕️
+                            </small>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Code before experiment */}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
-
-          {/* 
-  postData card code */}
         </div>
       </div>
     </section>

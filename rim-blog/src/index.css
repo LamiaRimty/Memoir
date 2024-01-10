@@ -17,18 +17,15 @@
 }
 
 :root{
-  /* --header-height:50px; */
 
-  /* Color */
- /* https://colorhunt.co/palette/faf1e4cedebd9eb384435334 */
 
- --first-color: rgb(54, 11, 85);
+ --first-color:rgb(233, 205, 252);
  --first-color-2nd:indigo;
  --first-color-alt: thistle;
  --first-color-lighter:#CEDEBD;
  --title-color:  indigo;
  --text-color: rgb(44, 8, 70);
-  --text-color-light:thistle;
+  --text-color-light:plum;
  --input-color:teal;
  --body-color: thistle;
  --container-color: #FAF1E4;
@@ -65,8 +62,8 @@ body {
   min-height: 100vh;
   overflow-x:hidden ;
   height: 100%;
-  background-color:thistle;
-  /* background-image: url("https://www.transparenttextures.com/patterns/food.png"); */
+  background-color:rgb(255, 248, 255);
+  
 background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
   font-family:'Lora', serif;;
   box-sizing: border-box;
@@ -80,7 +77,7 @@ background-image: url("https://www.transparenttextures.com/patterns/skulls.png")
 
 
 h1,h2,h4{
-/* color: #435334; */
+
 font-weight: 600;
 }
 
@@ -96,7 +93,7 @@ text-decoration: none;
 
 section{
 
-padding: 0px 30px 64px;
+padding: 0px 20px 30px;
 }
 
 .section-title{
@@ -131,8 +128,7 @@ text-align: center;
   background-image: -ms-linear-gradient(top,indigo ,#f08080 );
   background-image: -o-linear-gradient(top,indigo,#f08080);
   background-image: linear-gradient(to bottom,indigo, #f08080);
-  /* -webkit-border-radius: 28;
-  -moz-border-radius: 28; */
+  
   border-radius: 10px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-weight: 500;
