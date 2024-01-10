@@ -27,12 +27,20 @@
 }
 
 
-.blogPostDesc{
- font-size: 24px;
- line-height: 25px;
+.singlePostDesc{
+ font-size: 20px;
+ line-height: 30px;
  border:none;
- color: red;
+ color:var(--first-color-2nd);
 }
+
+.singlePostDesc::first-letter{
+    font-size: 30px;
+    /* margin-left: 20px; */
+    font-weight: 600;
+  
+  }
+
 .delete-btn{
     background-color:orangered;
     /* background-image: -webkit-linear-gradient(top,indigo,#f08080 );

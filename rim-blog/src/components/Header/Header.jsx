@@ -6,7 +6,7 @@ function Header() {
       <nav className="navbar navbar-expand-lg bg-body-">
         {/* <div class="container col-xxl-8 px-2 py-3 "> */}
         <div className="container-fluid col-xxl-8 px-2 py-3">
-          <a className="navbar-brand" href="#home">
+          <a className="navbar-brand animate__animated animate__flip" href="/">
             <img
               id="header-img"
               height="30"
