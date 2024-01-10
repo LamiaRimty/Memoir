@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import "./Blog.css";
 import { BsPencilSquare } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
+import { AiOutlineClockCircle } from "react-icons/ai";
 import axios from "axios";
 
 function Blog() {
@@ -64,18 +65,6 @@ function Blog() {
               className="container px-4 py-1 my-5 text-center"
               key={blogPost.id}
             >
-              {updateMode ? (
-                <input
-                  type="text"
-                  value={title}
-                  className="blogTitleInput"
-                  onChange={(e) => setTitle(e.target.value)}
-                />
-              ) : (
-                <>
-                  <h1 className="blogTitle">{title}</h1>
-                </>
-              )}
               <div>
                 <img
                   className="blogPost-img img-fluid border rounded-3 shadow-lg d-block  mx-auto mb-4"
@@ -83,18 +72,33 @@ function Blog() {
                   alt=""
                 />
               </div>
+              {updateMode ? (
+                <input
+                  type="text"
+                  value={title}
+                  className="singleTitle"
+                  onChange={(e) => setTitle(e.target.value)}
+                />
+              ) : (
+                <>
+                  <h1 className="singleTitle">{title}</h1>
+                </>
+              )}
 
               <div className="date-edit d-flex">
-                <p className="date">{blogPost.time}</p>
+                <p className="date">
+                  <AiOutlineClockCircle className="clock-icon" />{" "}
+                  {blogPost.time} 🥐 ☕️
+                </p>
                 <div className="buttons blogEdit">
                   <button
-                    className="button"
+                    className="btn update-btn"
                     onClick={() => setUpdateMode(true)}
                   >
                     <BsPencilSquare />
                   </button>
 
-                  <button className="button" onClick={handleDelete}>
+                  <button className="btn delete-btn" onClick={handleDelete}>
                     <AiOutlineDelete />
                   </button>
                 </div>
@@ -102,12 +106,12 @@ function Blog() {
 
               {updateMode ? (
                 <textarea
-                  className="blogDescInput"
+                  className="singlePostDesc"
                   value={desc}
                   onChange={(e) => setDesc(e.target.value)}
                 />
               ) : (
-                <p className="blogDesc">{desc}</p>
+                <p className="singlePostDesc">{desc}</p>
               )}
               {/* <p className="desc">{blogPost.desc}</p> */}
               {updateMode && (

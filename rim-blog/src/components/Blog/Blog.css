@@ -1,18 +1,37 @@
+.singleTitle{
+    color:var( --first-color-2nd);
+    /* margin-bottom:20px; */
+    /* margin-top: -80px; */
+}
+
 .blogPost-img{
     /* width: 500px;
     height: 500px; */
     vertical-align: middle;
     max-width: 80%;
-    height: auto;
-    display: flex!important;
+    height: 600px;
+    /* display: flex!important;
+    object-fit: cover; */
 }
 
 .date-edit{
     justify-content:space-between;
     align-items:center; 
 }
+
 .date{
     color: gray;
+    font-size: 14px;
+    font-weight: regular;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.blogPostDesc{
+ font-size: 24px;
+ line-height: 25px;
+ border:none;
+ color: red;
 }
 .delete-btn{
     background-color:orangered;
@@ -28,7 +47,7 @@
     font-weight: 500;
     color: #ffff;
     font-size: 12px;
-    padding: 10px;
+    padding: 12px;
     text-decoration: none;
     display: inline-block;
     width: fit-content;
@@ -40,7 +59,7 @@
 
 
     .update-btn{
-        background-color:plum;
+        background-color:teal;
         /* background-image: -webkit-linear-gradient(top,indigo,#f08080 );
         background-image: -moz-linear-gradient(top,indigo,#f08080 );
         background-image: -ms-linear-gradient(top,indigo ,#f08080 );
@@ -53,7 +72,8 @@
         font-weight: 500;
         color:white;
         font-size: 12px;
-        padding: 10px;
+        padding: 12px;
+        margin: 5px;
         text-decoration: none;
         display: inline-block;
         width: fit-content;
@@ -64,14 +84,14 @@
         }
     
     .btn:hover {
-    background:plum;
+    background:indigo;
     transform: translateY(-0.1rem);
-    background-image: -webkit-linear-gradient(top,plum,#FAF1E4);
-    background-image: -moz-linear-gradient(top, plum,#FAF1E4);
-    background-image: -ms-linear-gradient(top, plum, #FAF1E4);
-    background-image: -o-linear-gradient(top,plum, #FAF1E4);
-    background-image: linear-gradient(to bottom,plum, #FAF1E4);
+    background-image: -webkit-linear-gradient(top,indigo,teal);
+    background-image: -moz-linear-gradient(top, indigo,teal);
+    background-image: -ms-linear-gradient(top, indigo, teal);
+    background-image: -o-linear-gradient(top,indigo, teal);
+    background-image: linear-gradient(to bottom,indigo, teal);
     text-decoration: none;
-    color: indigo;
+    color: #f9f9f9;
     border: none;
     }

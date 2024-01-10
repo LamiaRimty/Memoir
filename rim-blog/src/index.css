@@ -19,12 +19,12 @@
 :root{
 
 
- --first-color:rgb(233, 205, 252);
- --first-color-2nd:indigo;
+ --first-color:indigo;
+ --first-color-2nd:rgb(51, 9, 86);
  --first-color-alt: thistle;
  --first-color-lighter:#CEDEBD;
  --title-color:  indigo;
- --text-color: rgb(44, 8, 70);
+ --text-color: rgb(25, 6, 40);
   --text-color-light:plum;
  --input-color:teal;
  --body-color: thistle;
@@ -112,7 +112,7 @@ color: var(--text-color);
 
 }
 
-h3 ,p,.section-subtitle{
+.section-subtitle{
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-weight: 300;
 }
