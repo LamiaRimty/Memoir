@@ -29,12 +29,12 @@ background-color:var(--text-color);
 }
 
 .new_footer_area {
-    background: #ffffff;
+    background: rgb(247, 244, 250);;
 }
 
 
 .new_footer_top {
-    padding: 0px 0px 200px;
+    padding: 0 0 265px;
     position: relative;
       overflow-x: hidden;
 }
@@ -48,66 +48,27 @@ background-color:var(--text-color);
     color: #7f88a6;
     padding: 27px 0px;
 }
-.new_footer_top .company_widget p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 28px;
-    color: #6a7695;
-    margin-bottom: 20px;
-}
-.new_footer_top .company_widget .f_subscribe_two .btn_get {
-    border-width: 1px;
-    margin-top: 20px;
-}
-.btn_get_two:hover {
-    background: transparent;
-    color: #5e2ced;
-}
-.btn_get:hover {
-    color: #fff;
-    background: #6754e2;
-    border-color: #6754e2;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
-    text-decoration: none;
-    outline: none;
-}
 
 
 
-.new_footer_top .f_widget.about-widget .f_list li a:hover {
-    color: #5e2ced;
-}
-.new_footer_top .f_widget.about-widget .f_list li {
-    margin-bottom: 11px;
-}
-.f_widget.about-widget .f_list li:last-child {
-    margin-bottom: 0px;
-}
-.f_widget.about-widget .f_list li {
-    margin-bottom: 15px;
-}
-.f_widget.about-widget .f_list {
-    margin-bottom: 0px;
-}
+
+
 .new_footer_top .f_social_icon a {
     width: 44px;
     height: 44px;
     line-height: 43px;
     background: transparent;
-    border: 1px solid #e2e2eb;
-    font-size: 24px;
 }
 .f_social_icon a {
-    width: 46px;
-    height: 46px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 45px;
-    color: #858da8;
-    display: inline-block;
+   display: inline-block;
+   align-items: end;
+   justify-content: end;
+    /* display: inline-block; */
     background: #ebeef5;
     text-align: center;
     -webkit-transition: all 0.2s linear;
