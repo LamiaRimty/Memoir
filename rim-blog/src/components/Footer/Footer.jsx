@@ -52,7 +52,7 @@ function Footer() {
         </ul>
       </div> */}
 
-      <div class="container">
+      <div class="container container col-xxl-8 px-4 py-5">
         <div class="row">
           <div class="col-lg-6 col-md-6 my-3">
             <div>
@@ -73,7 +73,7 @@ function Footer() {
 
           <div class="col-lg-6 col-md-6 ">
             {/* <p class="f-title f_600 t_color f_size_18">Get in touch</p> */}
-            <div className="d-flex justify-content-end my-5">
+            <div className="container d-flex justify-content-end my-2">
               <div class="f_social_icon">
                 <a
                   href="https://github.com/LamiaRimty"
