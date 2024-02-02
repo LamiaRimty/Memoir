@@ -1,17 +1,27 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.singleTitleInput{
+    margin: 10px;
+    font-size: 20px;
+   border-bottom: 1px solid grey;
+}
+
+
 .singleTitle{
     color:var( --first-color-2nd);
-    /* margin-bottom:20px; */
-    /* margin-top: -80px; */
+
 }
 
 .blogPost-img{
-    /* width: 500px;
-    height: 500px; */
+
     vertical-align: middle;
     max-width: 80%;
     height: 600px;
-    /* display: flex!important;
-    object-fit: cover; */
+
 }
 
 .date-edit{
@@ -26,32 +36,35 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.singlePostDescInput{
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    border-bottom: 1px solid grey;
+}
 
 .singlePostDesc{
+
  font-size: 20px;
  line-height: 30px;
  border:none;
  color:var(--first-color-2nd);
+ text-indent: 50px;
+
+
 }
 
 .singlePostDesc::first-letter{
     font-size: 30px;
-    /* margin-left: 20px; */
     font-weight: 600;
   
   }
 
 .delete-btn{
     background-color:orangered;
-    /* background-image: -webkit-linear-gradient(top,indigo,#f08080 );
-    background-image: -moz-linear-gradient(top,indigo,#f08080 );
-    background-image: -ms-linear-gradient(top,indigo ,#f08080 );
-    background-image: -o-linear-gradient(top,indigo,#f08080);
-    background-image: linear-gradient(to bottom,indigo, #f08080); */
-    /* -webkit-border-radius: 28;
-    -moz-border-radius: 28; */
+
     border-radius: 10px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-weight: 500;
     color: #ffff;
     font-size: 12px;
@@ -68,15 +81,11 @@
 
     .update-btn{
         background-color:teal;
-        /* background-image: -webkit-linear-gradient(top,indigo,#f08080 );
-        background-image: -moz-linear-gradient(top,indigo,#f08080 );
-        background-image: -ms-linear-gradient(top,indigo ,#f08080 );
-        background-image: -o-linear-gradient(top,indigo,#f08080);
-        background-image: linear-gradient(to bottom,indigo, #f08080); */
+
         -webkit-border-radius: 28;
         -moz-border-radius: 28;
         border-radius: 10px;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         font-weight: 500;
         color:white;
         font-size: 12px;
@@ -102,4 +111,17 @@
     text-decoration: none;
     color: #f9f9f9;
     border: none;
+    }
+
+    .blogEditButton{
+        font-size: 16px;
+        width: 100px;
+        color: #f9f9f9;
+        background-color: var(--first-color);
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        align-self: flex-end;
+        margin: 10px 0;
     }

@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Blogs from "./components/Blogs/Blogs";
 import Blog from "./components/Blog/Blog";
 import Create from "./components/Create/Create";
-import Update from "./components/Update/Update";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,7 +24,7 @@ function App() {
         <Route exact path="/blog/:id" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="/create" element={<Create />} />
-        <Route path="/update/:id" element={<Update/>} />
+       
         
       </Routes>
       <Footer />

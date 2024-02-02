@@ -22,8 +22,17 @@
       align-self: center;
       width:280px;
       height:300px;
+      animation: motion 4s linear infinite;
       
     }
+
+@keyframes motion {
+  50%{
+    right: 30px;
+    top:-90px
+  }
+}
+
     #rimty{
       border-radius:10px;
       border: 15px solid rgb(160, 208, 208);

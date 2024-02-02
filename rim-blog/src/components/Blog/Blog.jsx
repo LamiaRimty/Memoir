@@ -62,7 +62,7 @@ function Blog() {
         {blogPost ? (
           <article className="singleBlog">
             <div
-              className="container px-4 py-1 my-5 text-center"
+              className="container wrapper px-4 py-1 my-5 text-center"
               key={blogPost.id}
             >
               <div>
@@ -76,7 +76,7 @@ function Blog() {
                 <input
                   type="text"
                   value={title}
-                  className="singleTitle"
+                  className="singleTitleInput"
                   onChange={(e) => setTitle(e.target.value)}
                 />
               ) : (
@@ -106,7 +106,7 @@ function Blog() {
 
               {updateMode ? (
                 <textarea
-                  className="singlePostDesc"
+                  className="singlePostDescInput"
                   value={desc}
                   onChange={(e) => setDesc(e.target.value)}
                 />

@@ -23,15 +23,15 @@ const Blogs = () => {
 
   return (
     <section id="blogs">
-      <div className="album  bg-body-">
+      <div className="album bg-body-">
         <p className="memoir-caption animate__animated animate__backInLeft">
           💁🏻‍♀️ Memoir is my thought of words that need to be written...🖌️
         </p>
         <div className="container">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {blogs.map((blog) => (
-              <Link to={`/blog/${blog.id}`} className="link">
-                <div className="col" key={blog.id}>
+              <Link to={`/blog/${blog.id}`} className="link" key={blog.id}>
+                <div className="col">
                   {/* Code before experiment */}
                   {/* <div className="card cardItems shadow-sm ">
                     <img
@@ -53,19 +53,19 @@ const Blogs = () => {
                   </div>
                 */}
 
-                  <div class="main animate__animated animate__zoomInUp">
-                    <ul class="cards">
-                      <li class="cards_item">
-                        <div class="card">
-                          <div class="card_image">
+                  <div className="main animate__animated animate__zoomInUp">
+                    <ul className="cards">
+                      <li className="cards_item">
+                        <div className="card">
+                          <div className="card_image">
                             <img
                               src={`http://localhost:8800/uploads/${blog.image}`}
-                              alt="mixed vegetable salad in a mason jar. "
+                              alt="card-img"
                             />
                           </div>
-                          <div class="card_content">
-                            <h2 class="card-title">{blog.title}</h2>
-                            <p class="card-qoute">{blog.qoute}</p>
+                          <div className="card_content">
+                            <h2 className="card-title">{blog.title}</h2>
+                            <p className="card-qoute">{blog.qoute}</p>
                             <small className="card-time">
                               {" "}
                               <AiOutlineClockCircle className="clock-icon" />{" "}

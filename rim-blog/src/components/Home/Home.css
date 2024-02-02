@@ -8,13 +8,22 @@
 }
 
 .intro{
+   
+    color:khaki;
+    text-shadow:
+        3px 3px 0 indigo,
+      -1px -1px 0 indigo,  
+       1px -1px 0 indigo,
+       -1px 1px 0 indigo,
+        1px 1px 0 indigo;
     text-align: center;
      font-size: 50px;
-     color: indigo;
+     letter-spacing: 5px;
      font-weight: 300;
       font-family:fantasy;
-      font-style:oblique;
+      /* font-style:oblique; */
       margin-bottom: -80px;
+      
 }
 
 
